@@ -4,22 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
+    <link rel="stylesheet" href="../src/dist/output.css">
 </head>
-<body>
-    <header><h2>About me</h2></header>
-    <a href="home.html">Home</a>
-    <a href="experience&skills.html">Experience & Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="contactme.html">Contact me</a>
-    <hr>
-    <img src="images/photo2.jpg" alt="animated girl wearing a graduation hat">
-    <div>
-        <p>Hello, my name is Bethel Dereje. I am web designer and developer driven by my passion for coding, problem-solving, and coming up with creative solutions fuels my intense curiosity.  I am thrilled to explore the constantly changing world of technology. I have a strong interest in software development, and I'm always learning new programming languages and design concepts to be able to make a valuable contribution. My hobbies include baking, photography and listening to music.</p>
+<body class="bg-yellow-100">
+
+    <div class="container mx-auto p-3">
+
+        <nav class="bg-yellow-200 p-4 mb-3 shadow-lg">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-bold">About Me</h2>
+                <div class="burger lg:hidden">
+                    <button id="burgerBtn" class="text-white cursor-pointer">
+                        <span class="block h-2 w-6 border-b border-black"></span>
+                        <span class="block h-2 w-6 border-b border-black mt-1"></span>
+                        <span class="block h-2 w-6 border-b border-black mt-1"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="navLinks" class="hidden lg:flex justify-end space-x-4 mt-4 ml-6 text-lg">
+                <a class="font-bold hover:text-black" href="./home.html">Home</a>
+                <a class="font-bold hover:text-black" href="./experience&skills.html">Experience & Skills</a>
+                <a class="font-bold hover:text-black" href="./projects.html">Projects</a>
+                <a class="font-bold hover:text-black" href="./Contactme.html">Contact me</a>
+            </div>
+        </nav>
+
+        <script>
+            document.getElementById('burgerBtn').addEventListener('click', function() {
+                var navLinks = document.getElementById('navLinks');
+                navLinks.classList.toggle('hidden');
+            });
+        </script>
+
+        <div class="flex flex-col lg:flex-row items-center">
+
+            <div class="lg:w-1/2 lg:pr-8 text-center">
+                <div class="image-introduction">
+                    <img class="photo2 h-96 mt-3" src="images/photo2.jpg" alt="animated girl wearing a graduation hat">
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 text-center lg:text-left p-4">
+                <div class="introduction">
+                    <p class="text-xl">Hello, my name is Bethel Dereje. I am a web designer and developer driven by my passion for coding, problem-solving, and coming up with creative solutions. My intense curiosity fuels my desire to explore the constantly changing world of technology. I have a strong interest in software development and am always learning new programming languages and design concepts to make a valuable contribution. My hobbies include baking, photography, and listening to music.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-6 bg-black">
+
+        <footer>
+            <a href="contactme.html" class="text-black">Contact Me</a>
+        </footer>
 
     </div>
-    <footer>
-        <a href="contactme.html">Contact Me</a>
-    </footer>
-    
+
 </body>
 </html>

@@ -3,34 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../src/dist/output.css">
 </head>
-<body>
-    <header><h2>Experience & Skills</h2></header>
-    <a href="home.html">Home</a>
-    <a href="aboutme.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="contactme.html">Contact me</a>
-    <hr>
-    <div>
-        <h3>Experience</h3>
-        <ul>
-            <li>Collaborating with clients to determine website requirements and goals..</li>
-            <li>Designing website layouts and user interfaces using tools like Adobe Photoshop, figma or Sketch. </li>
-            <li>Writing HTML, CSS, and JavaScript code to implement website designs.</li>
-            <li>Troubleshooting technical issues and bugs in website functionality.</li>
-        </ul>
-        <img src="images/hardworkingphoto.jpg"alt="workspace photo">
+<body class="bg-yellow-100">
+
+    <div class="container mx-auto p-4">
+
+        <nav class="bg-yellow-200 p-4 mb-3 shadow-lg">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-bold mt">Experience & Skills</h2>
+                <div class="burger lg:hidden">
+                    <button id="burgerBtn" class="text-white cursor-pointer">
+                        <span class="block h-2 w-6 border-b border-black"></span>
+                        <span class="block h-2 w-6 border-b border-black mt-1"></span>
+                        <span class="block h-2 w-6 border-b border-black mt-1"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="navLinks" class="hidden lg:flex justify-end space-x-4 mt-4 ml-6 text-lg">
+                <a class="font-bold hover:text-black" href="./home.html">Home</a>
+                <a class="font-bold hover:text-black" href="./aboutme.html">About Me</a>
+                <a class="font-bold hover:text-black" href="./projects.html">Projects</a>
+                <a class="font-bold hover:text-black" href="./Contactme.html">Contact me</a>
+            </div>
+
+        </nav>
+
+        <script>
+            document.getElementById('burgerBtn').addEventListener('click', function() {
+                var navLinks = document.getElementById('navLinks');
+                navLinks.classList.toggle('hidden');
+            });
+        </script>
+
+        <div class="lg:flex mt-4">
+            <div class="lg:w-1/2 lg:pr-4">
+                <div class="content text-lg ml-6">
+                    <h2 class="text-2xl font-bold mb-4">Experience</h2>
+                    <ul class="list-disc list-inside">
+                        <li>Collaborating with clients to determine website requirements and goals.</li>
+                        <li>Designing website layouts and user interfaces using tools like Adobe Photoshop, Figma, or Sketch.</li>
+                        <li>Writing HTML, CSS, and JavaScript code to implement website designs.</li>
+                        <li>Troubleshooting technical issues and bugs in website functionality.</li>
+                    </ul>
+                </div>
+                <img class="w-72 mt-4 ml-12" src="images/hardworkingphoto.jpg" alt="workspace photo">
+            </div>
+
+            <div class="lg:w-1/2 mt-4 lg:mt-0">
+                <div class="content ml-12">
+                    <h2 class="text-2xl font-bold mb-4">Skills</h2>
+                    <img class="w-96" src="images/venndiagram2x.png" alt="venn diagram">
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-6 bg-black">
+
+        <footer>
+            <a href="contactme.html" class="text-black">Contact Me</a>
+        </footer>
     </div>
-    <br>
-    <div>
-        <h3>Skills</h3>
-        <img src="images/venndiagram2x.png"alt="venn diagram">
-        
-        
-    </div>
-    <footer>
-        <a href="contactme.html">Contact Me</a>
-    </footer>
+
 </body>
 </html>

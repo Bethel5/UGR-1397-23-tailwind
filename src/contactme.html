@@ -3,44 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../src/dist/output.css">
 </head>
-<body>
-    <header><h2>Contact Me</h2></header>
-    <a href="home.html">Home</a>
-    <a href="aboutme.html">About Me</a>
-    <a href="experience&skills.html">Experience & skills</a>
-    <a href="projects.html">Projects</a>
-    <hr>
-    <br>
-        <h3>Get in touch with me!</h3>
-    <br>
-    
-    <table>
-        
-        <tr>
-            <td>
-                <img src="images/phoneicon.png" alt="phone icon">+251900000000
-            </td>
-            <td>
-                <img src="images/gmailicon.png" alt="gmail icon">betheldereje5@gmail.com
-            </td>
-            
+<body class="bg-yellow-100">
 
-        <tr>
-            <td>
-                <img src="images/telegramicon.png" alt="telegram icon">@b_e_th_e_l
-            </td>
-            <td>
-                <img src="images/instagramicon.png" alt="instagram icon">@b_e_th_e_l
-            </td>
-            </tr>                
-            
-   
-    </table>
-    <br>
-    <footer>
-        <a href="contactme.html">Contact Me</a>
-    </footer>
+    <div class="container mx-auto p-4">
+
+        <nav class="bg-yellow-200 p-4 mb-3 shadow-lg">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-bold">Contact Me</h2>
+                <div class="burger lg:hidden">
+                    <button id="burgerBtn" class="text-white cursor-pointer">
+                        <span class="block h-2 w-6 border-b border-black"></span>
+                        <span class="block h-2 w-6 border-b border-black mt-1"></span>
+                        <span class="block h-2 w-6 border-b border-black mt-1"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="navLinks" class="hidden lg:flex justify-end space-x-4 mt-4 ml-6 text-lg">
+                <a class="font-bold hover:text-black" href="./home.html">Home</a>
+                <a class="font-bold hover:text-black" href="./aboutme.html">About Me</a>
+                <a class="font-bold hover:text-black" href="./experience&skills.html">Experience & Skills</a>                    
+                <a class="font-bold hover:text-black" href="./projects.html">Projects</a>
+            </div>
+
+        </nav>
+
+        <script>
+            document.getElementById('burgerBtn').addEventListener('click', function() {
+                var navLinks = document.getElementById('navLinks');
+                navLinks.classList.toggle('hidden');
+            });
+        </script>
+
+        <div class="my-8">
+            <h3 class="text-2xl font-bold mb-4">Get in touch with me!</h3>
+
+            <div class="table mt-16 mb-24">
+                <table class="w-full">
+                    <tr>
+                        <td class="py-2">
+                            <img class="inline-block w-6 h-6 mr-2" src="images/phoneicon.png" alt="phone icon">
+                            +251900000000
+                        </td>
+                        <td class="py-2 mb-24">
+                            <img class="inline-block w-6 h-6 mr-2 ml-24" src="images/gmailicon.png" alt="gmail icon">
+                            betheldereje5@gmail.com
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2">
+                            <img class="inline-block w-6 h-6 mr-2" src="images/telegramicon.png" alt="telegram icon">
+                            @b_e_th_e_l
+                        </td>
+                        <td class="py-2">
+                            <img class="inline-block w-6 h-6 mr-2 ml-24" src="images/instagramicon.png" alt="instagram icon">
+                            @b_e_th_e_l
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <hr class="my-6 bg-black">
+
+        <footer>
+            <a class="text-black" href="contactme.html">Contact Me</a>
+        </footer>
+    </div>
+
 </body>
 </html>
+
